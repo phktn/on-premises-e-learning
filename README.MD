@@ -2,7 +2,8 @@
 
 Development environment
 
-* OpenJDK 14.0
+* OpenJDK 11
+* Kotlin 1.4.20
 * Spring Boot 2.2.7
 * Spring Security 5.2.4
 * H2
