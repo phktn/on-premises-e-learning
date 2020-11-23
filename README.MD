@@ -32,7 +32,7 @@ java -jar .\build\libs\demo.jar
 ## Demo simple application top page
 
 ```
-http://localhost:8080/
+http://localhost:8080/demo/
 ```
 
 **top page**
@@ -67,5 +67,5 @@ DEFAULT CHARSET = UTF8MB4;
 h2-console
 
 ```
-http://localhost:8080/h2-console
+http://localhost:8080/demo/h2-console
 ```

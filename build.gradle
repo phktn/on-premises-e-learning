@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'org.jetbrains.kotlin.jvm' version '1.4.20'
     id 'org.jetbrains.kotlin.plugin.spring' version '1.4.20'
+    id 'war'
 }
 
 group = 'com.example'
@@ -31,6 +32,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     runtimeOnly 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -62,3 +64,5 @@ compileTestKotlin {
         jvmTarget = '11'
     }
 }
+
+war.enabled = true

@@ -6,7 +6,11 @@ import org.springframework.boot.runApplication
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
-class Application
+class Application : SpringBootServletInitializer() {
+    override fun configure(application: SpringApplicationBuilder): SpringApplicationBuilder? {
+        return application.sources(Application::class.java)
+    }
+}
 
 fun main(args: Array<String>) {
     runApplication<Application>(*args)
