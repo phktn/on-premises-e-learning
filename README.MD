@@ -6,7 +6,7 @@ Development environment
 * Spring Boot 2.2.7
 * Spring Security 5.2.4
 * H2
-* Gradle 6.3
+* Gradle 6.7.1
 
 ## Build & Run
 
