@@ -1,11 +1,11 @@
-# Spring Security With Spring Boot 2.2 Demo simple application
+# Spring Security With Spring Boot 2.4 Demo simple application
 
 Development environment
 
 * OpenJDK 11
 * Kotlin 1.4.20
-* Spring Boot 2.2.7
-* Spring Security 5.2.4
+* Spring Boot 2.4.0
+* Spring Security 5.4.1
 * H2
 * Gradle 6.7.1
 
