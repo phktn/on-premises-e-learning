@@ -35,6 +35,24 @@ class ContentsController(private val contentsService: ContentsService) {
         return "members/admin/index"
     }
 
+    @GetMapping(value = ["manager"])
+    fun manager(@AuthenticationPrincipal(expression = "user") user: User): String {
+        log.info("#manager id:{}, name:{}", user.id, user.name)
+        return "members/manager/index"
+    }
+
+    @GetMapping(value = ["teacher"])
+    fun teacher(@AuthenticationPrincipal(expression = "user") user: User): String {
+        log.info("#teacher id:{}, name:{}", user.id, user.name)
+        return "members/teacher/index"
+    }
+
+    @GetMapping(value = ["student"])
+    fun student(@AuthenticationPrincipal(expression = "user") user: User): String {
+        log.info("#student id:{}, name:{}", user.id, user.name)
+        return "members/student/index"
+    }
+
     companion object {
         private val log = LoggerFactory.getLogger(ContentsController::class.java)
     }

@@ -38,6 +38,9 @@ class WebSecurityConfig : WebSecurityConfigurerAdapter() {
                 authorize("/images/user/**", hasAuthority("ROLE_USER"))
                 authorize("/members/admin/**", hasAuthority("ROLE_ADMIN"))
                 authorize("/images/admin/**", hasAuthority("ROLE_ADMIN"))
+                authorize("/members/manager/**", hasAuthority("ROLE_MANAGER"))
+                authorize("/members/teacher/**", hasAuthority("ROLE_TEACHER"))
+                authorize("/members/student/**", hasAuthority("ROLE_STUDENT"))
                 authorize(anyRequest, authenticated)
             }
             formLogin {
