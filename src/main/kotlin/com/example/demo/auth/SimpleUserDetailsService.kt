@@ -23,8 +23,8 @@ class SimpleUserDetailsService(private val userRepository: UserRepository) : Use
     override fun loadUserByUsername(email: String): UserDetails {
         log.debug("loadUserByUsername(email):[{}]", email)
         return userRepository.findByEmail(email)
-                .map { user: User? -> SimpleLoginUser(user!!) }
-                .orElseThrow { UsernameNotFoundException("User not found by email:[$email]") }
+            .map { user: User? -> SimpleLoginUser(user!!) }
+            .orElseThrow { UsernameNotFoundException("User not found by email:[$email]") }
     }
 
     companion object {

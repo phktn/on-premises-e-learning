@@ -11,7 +11,8 @@ import java.util.stream.Collectors
 import java.util.stream.Stream
 
 @Service
-class AccountServiceImpl(private val userRepository: UserRepository, private val passwordEncoder: PasswordEncoder) : AccountService {
+class AccountServiceImpl(private val userRepository: UserRepository, private val passwordEncoder: PasswordEncoder) :
+    AccountService {
     @Transactional(readOnly = true)
     override fun findAll(): List<User> {
         return userRepository.findAll()
@@ -45,9 +46,9 @@ class AccountServiceImpl(private val userRepository: UserRepository, private val
         return if (roles.isEmpty()) {
             ""
         } else Stream.of(*roles)
-                .map { obj: String -> obj.trim { it <= ' ' } }
-                .map { obj: String -> obj.toUpperCase() }
-                .collect(Collectors.joining(","))
+            .map { obj: String -> obj.trim { it <= ' ' } }
+            .map { obj: String -> obj.toUpperCase() }
+            .collect(Collectors.joining(","))
     }
 
     companion object {

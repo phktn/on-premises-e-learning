@@ -43,7 +43,6 @@ http://localhost:8080/demo/
 
 ![top](https://raw.githubusercontent.com/rubytomato/demo-spring-security-simple/master/images/top_after_login.png)
 
-
 ## database
 
 using h2
@@ -74,7 +73,8 @@ http://localhost:8080/demo/h2-console
 
 このソフトウェアには以下のオープンソースソフトウェアが含まれています。
 
-* [Spring Security With Spring Boot 2.2 Demo simple application](https://github.com/rubytomato/demo-spring-security-simple) / [MIT License](https://github.com/rubytomato/demo-spring-security-simple/blob/master/LICENSE)  
+* [Spring Security With Spring Boot 2.2 Demo simple application](https://github.com/rubytomato/demo-spring-security-simple)
+  / [MIT License](https://github.com/rubytomato/demo-spring-security-simple/blob/master/LICENSE)  
   Copyright (c) 2020 [Watanabe Shin](https://github.com/rubytomato)
 
 ## ライセンス / License

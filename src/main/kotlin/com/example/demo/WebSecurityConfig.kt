@@ -21,9 +21,9 @@ class WebSecurityConfig : WebSecurityConfigurerAdapter() {
     override fun configure(web: WebSecurity) {
         // @formatter:off
         web
-                .debug(false)
-                .ignoring()
-                .antMatchers("/js/**", "/css/**")
+            .debug(false)
+            .ignoring()
+            .antMatchers("/js/**", "/css/**")
         // @formatter:on
     }
 
