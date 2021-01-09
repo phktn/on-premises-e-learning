@@ -17,9 +17,12 @@ class SimpleLoginUser
  *
  * @param user userエンティティ
  */(  // DBより検索したuserエンティティ
-        // 認証・認可以外でアプリケーションから利用されるのでフィールドに定義
-        val user: User) : org.springframework.security.core.userdetails.User(user.email, user.password, user.enable, true, true,
-        true, convertGrantedAuthorities(user.roles)) {
+    // 認証・認可以外でアプリケーションから利用されるのでフィールドに定義
+    val user: User
+) : org.springframework.security.core.userdetails.User(
+    user.email, user.password, user.enable, true, true,
+    true, convertGrantedAuthorities(user.roles)
+) {
 
     companion object {
         private val log = LoggerFactory.getLogger(SimpleLoginUser::class.java)
@@ -34,8 +37,8 @@ class SimpleLoginUser
             return if (roles.isNullOrEmpty()) {
                 emptySet()
             } else Stream.of(*roles.split(",").toTypedArray())
-                    .map { role: String? -> SimpleGrantedAuthority(role) }
-                    .collect(Collectors.toSet())
+                .map { role: String? -> SimpleGrantedAuthority(role) }
+                .collect(Collectors.toSet())
         }
     }
 }
